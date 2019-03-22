@@ -34,7 +34,9 @@ router.put("/:id", (req, res) => {
       } else {
         res
           .status(400)
-          .json({ errMessage: "the project you tried to update dosnt exist" });
+          .json({
+            errMessage: "the project you tried to update doesn't exist"
+          });
       }
     })
     .catch(err => res.status(500).json(err));
